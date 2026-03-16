@@ -1,6 +1,6 @@
 import dev.scaffoldit.hytale.wire.HytaleManifest
 
-rootProject.name = "dev.hytalemodding"
+rootProject.name = "Hytale Showcase"
 
 plugins {
     // See documentation on https://scaffoldit.dev
