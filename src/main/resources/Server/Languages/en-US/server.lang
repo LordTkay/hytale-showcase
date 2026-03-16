@@ -1,0 +1,18 @@
+
+# === commands ===
+
+commands.rune = Display information about available runes.
+commands.rune.get = Display all available runes.
+commands.rune.details = Display all information about a specific rune.
+commands.rune.details.runeId = The technical ID of the target rune asset.
+commands.rune.details.notFound=The rune {runeId} could not be found.
+
+# === runes ===
+runes.Fire_Rune.name=Fire Rune
+runes.Fire_Rune.description=A magical rune that contains the power of fire effects!
+
+# === rune effects ===
+runeEffects.Fireball.name=Fireball
+runeEffects.Fireball.description=I cast Fireball!
+runeEffects.EmberBurst.name=Ember Burst
+runeEffects.EmberBurst.description=Burst of embers that deal damage over time!
