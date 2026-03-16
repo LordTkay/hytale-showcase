@@ -1,20 +1,19 @@
 {
-    "Group": "HytaleModding",
-    "Name": "ExamplePlugin",
-    "Version": "0.0.0",
-    "Description": "Description of your plugin",
+    "Group": "LordTkay",
+    "Name": "Showcase",
+    "Version": "1.0.0",
+    "Description": "A mod that contains examples on how to do things in Hytale modding",
     "Authors": [
         {
-            "Name": "Your Name",
-            "Email": "your.email@example.com",
-            "Url": "https://your-website.com"
+            "Name": "Lord Tkay",
+            "Email": "tobawa2601@gmail.com",
+            "Url": "https://github.com/LordTkay"
         }
     ],
-    "Website": "https://your-plugin-website.com",
     "DisabledByDefault": false,
-    "IncludesAssetPack": false,
+    "IncludesAssetPack": true,
     "Dependencies": {},
     "OptionalDependencies": {},
     "ServerVersion": "*",
-    "Main": "dev.hytalemodding.ExamplePlugin"
+    "Main": "de.lordtkay.showcase.ShowcasePlugin"
 }

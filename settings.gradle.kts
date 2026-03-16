@@ -1,3 +1,5 @@
+import dev.scaffoldit.hytale.wire.HytaleManifest
+
 rootProject.name = "dev.hytalemodding"
 
 plugins {
@@ -21,8 +23,15 @@ hytale {
     }
 
     manifest {
-        Group = "HytaleModding"
-        Name = "ExamplePlugin"
-        Main = "dev.hytalemodding.ExamplePlugin"
+        Group = "LordTkay"
+        Name = "Showcase"
+        Version = "1.0.0"
+        Description = "A mod that contains examples on how to do things in Hytale modding"
+        Main = "de.lordtkay.showcase.ShowcasePlugin"
+        Authors = listOf(
+            HytaleManifest.Author("Lord Tkay", "tobawa2601@gmail.com", "https://github.com/LordTkay")
+        )
+        IncludesAssetPack = true
+        Dependencies = mapOf()
     }
 }
