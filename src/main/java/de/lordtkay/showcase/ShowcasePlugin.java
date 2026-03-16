@@ -1,8 +1,13 @@
 package de.lordtkay.showcase;
 
+import com.hypixel.hytale.assetstore.map.DefaultAssetMap;
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.server.core.asset.HytaleAssetStore;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
+import de.lordtkay.showcase.asset.Rune;
+import de.lordtkay.showcase.asset.RuneEffect;
+import de.lordtkay.showcase.command.RuneCommandCollection;
 
 import javax.annotation.Nonnull;
 
@@ -34,7 +39,8 @@ public class ShowcasePlugin extends JavaPlugin {
     protected void setup() {
         logger.atInfo().log("[{}] Setting up...", getName());
 
-        // Registration of your assets, interactions, systems and more
+        registerAssetStores();
+        getCommandRegistry().registerCommand(new RuneCommandCollection());
 
         logger.atInfo().log("[{}] Setup complete!", getName());
     }
@@ -54,5 +60,34 @@ public class ShowcasePlugin extends JavaPlugin {
     protected void shutdown() {
         logger.atInfo().log("[{}] Shut down!", getName());
         instance = null;
+    }
+
+    private void registerAssetStores() {
+        var runeAssetStore = HytaleAssetStore
+                .builder(
+                        String.class,
+                        Rune.class,
+                        new DefaultAssetMap<>()
+                )
+                .setCodec(Rune.CODEC)
+                .setKeyFunction(Rune::getId)
+                .setReplaceOnRemove(Rune::new)
+                .setPath(Rune.ASSET_PATH)
+                .build();
+        getAssetRegistry().register(runeAssetStore);
+
+        var runeEffectAssetStore = HytaleAssetStore
+                .builder(
+                        String.class,
+                        RuneEffect.class,
+                        new DefaultAssetMap<>()
+                )
+                .setCodec(RuneEffect.CODEC)
+                .setKeyFunction(RuneEffect::getId)
+                .setReplaceOnRemove(RuneEffect::new)
+                .setPath(RuneEffect.ASSET_PATH)
+                .loadsBefore(Rune.class)
+                .build();
+        getAssetRegistry().register(runeEffectAssetStore);
     }
 }
