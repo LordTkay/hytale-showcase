@@ -6,6 +6,7 @@ import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 
 import javax.annotation.Nonnull;
 
+@SuppressWarnings("unused")
 public class ShowcasePlugin extends JavaPlugin {
 
     @Nonnull
