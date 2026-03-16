@@ -1,0 +1,25 @@
+{
+  "TranslationProperties": {
+    "Name": "server.runes.Fire_Rune.name",
+    "Description": "server.runes.Fire_Rune.description"
+  },
+  "Type": "Fire",
+  "Effects": [
+    {
+      "DamageCause": "Fire",
+      "Power": 15,
+      "TranslationProperties": {
+        "Name": "server.runeEffects.Fireball.name",
+        "Description": "server.runeEffects.Fireball.description"
+      }
+    },
+    {
+      "DamageCause": "Fire",
+      "Power": 5,
+      "TranslationProperties": {
+        "Name": "server.runeEffects.EmberBurst.name",
+        "Description": "server.runeEffects.EmberBurst.description"
+      }
+    }
+  ]
+}
