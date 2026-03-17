@@ -65,7 +65,6 @@ public class ShowcasePlugin extends JavaPlugin {
     private void registerAssetStores() {
         var runeAssetStore = HytaleAssetStore
                 .builder(
-                        String.class,
                         Rune.class,
                         new DefaultAssetMap<>()
                 )
@@ -78,7 +77,6 @@ public class ShowcasePlugin extends JavaPlugin {
 
         var runeEffectAssetStore = HytaleAssetStore
                 .builder(
-                        String.class,
                         RuneEffect.class,
                         new DefaultAssetMap<>()
                 )
